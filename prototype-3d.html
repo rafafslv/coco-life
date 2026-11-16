@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8d9e7" />
+  <meta name="description" content="Coco Life 3D character preview" />
+  <title>Coco Life — 3D Character Studio</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <a class="brand" href="/">🥥 Coco Life</a>
+      <span class="tag">3D CHARACTER TEST</span>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">WELCOME TO YOUR LITTLE WORLD</p>
+        <h1>Meet your Coco character!</h1>
+        <p>Drag to turn her around. Use the wheel to zoom in and out.</p>
+      </section>
+      <section class="stage-wrap">
+        <div id="stage" aria-label="Interactive 3D character preview"></div>
+        <div class="stage-tip">🖱️ Drag to rotate · Scroll to zoom</div>
+        <div class="controls">
+          <button id="front" type="button">Front</button>
+          <button id="spin" type="button">✨ Spin</button>
+          <button id="reset" type="button">Reset view</button>
+        </div>
+      </section>
+      <p class="note">This is the first 3D test model. We can refine her face, hair, clothes and the dressing room next.</p>
+    </main>
+  </div>
+  <script type="module" src="/src/prototype3d.ts"></script>
+</body>
+</html>
