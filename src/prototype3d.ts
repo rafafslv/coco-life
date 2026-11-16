@@ -133,8 +133,8 @@ for (let i = 0; i < 8; i++) {
 }
 
 function resize() {
-  const width = stageElement.clientWidth;
-  const height = stageElement.clientHeight;
+  const width = stageElement!.clientWidth;
+  const height = stageElement!.clientHeight;
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
   renderer.setSize(width, height);
