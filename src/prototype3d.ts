@@ -2,8 +2,8 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import "./prototype3d.css";
 
-const stage = document.querySelector<HTMLDivElement>("#stage");
-if (!stage) throw new Error("3D stage element was not found.");
+const stageElement = document.querySelector<HTMLDivElement>("#stage");
+if (!stageElement) throw new Error("3D stage element was not found.");
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color("#f8e8f0");
@@ -17,7 +17,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
-stage.appendChild(renderer.domElement);
+stageElement.appendChild(renderer.domElement);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
@@ -133,8 +133,8 @@ for (let i = 0; i < 8; i++) {
 }
 
 function resize() {
-  const width = stage.clientWidth;
-  const height = stage.clientHeight;
+  const width = stageElement.clientWidth;
+  const height = stageElement.clientHeight;
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
   renderer.setSize(width, height);
