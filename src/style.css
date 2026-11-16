@@ -1,0 +1,2 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap');
+:root{font-family:Nunito,ui-rounded,system-ui,sans-serif;color:#25435a;background:#9be4f1;font-synthesis:none}*{box-sizing:border-box}html,body,#game{width:100%;height:100%;margin:0;overflow:hidden}body{background:linear-gradient(145deg,#a7e9f2,#c7f0dd 55%,#ffe6ba)}#game{display:grid;place-items:center;touch-action:none}canvas{display:block;max-width:100%;max-height:100%;border-radius:18px;box-shadow:0 18px 55px #386b8050}@media(max-width:700px){canvas{border-radius:0}}

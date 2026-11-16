@@ -1,0 +1,3 @@
+import {describe,expect,it} from 'vitest';
+import{nextRingIndex,safeLoad}from'../src/gameLogic';
+describe('Coco Life game state',()=>{it('starts fresh',()=>expect(safeLoad(null).outfit).toBe('mint'));it('recovers invalid JSON',()=>expect(safeLoad('{broken').coins).toBe(0));it('clamps values and filters places',()=>{const s=safeLoad(JSON.stringify({hair:99,coins:-4,visited:['home','hacker'],outfit:'pink'}));expect(s.hair).toBe(2);expect(s.coins).toBe(0);expect(s.visited).toEqual(['home']);expect(s.outfit).toBe('mint');});it('wraps the circular neighborhood',()=>{expect(nextRingIndex(0,-1,6)).toBe(5);expect(nextRingIndex(5,1,6)).toBe(0);});});
